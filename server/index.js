@@ -155,9 +155,9 @@ if (fs.existsSync(distPath)) {
   });
 }
 
-app.listen(PORT, () => {
-  console.log(`\n🚀 Resume API server running on http://localhost:${PORT}`);
-  console.log(`📄 Resume data: http://localhost:${PORT}/api/resume`);
-  console.log(`💬 Contact endpoint: POST http://localhost:${PORT}/api/contact`);
-  console.log(`🖥️  Terminal: http://localhost:${PORT}/api/terminal/help\n`);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`\n🚀 Resume API server running on http://0.0.0.0:${PORT}`);
+  console.log(`📄 Resume data: /api/resume`);
+  console.log(`💬 Contact endpoint: POST /api/contact`);
+  console.log(`🖥️  Terminal: /api/terminal/help\n`);
 });
