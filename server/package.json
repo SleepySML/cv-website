@@ -1,0 +1,15 @@
+{
+  "name": "cv-website-server",
+  "version": "1.0.0",
+  "description": "Backend API for resume website",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --watch index.js",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.0",
+    "express-rate-limit": "^7.4.0"
+  }
+}

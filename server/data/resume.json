@@ -1,0 +1,168 @@
+{
+  "name": "Evgenii Kurdakov",
+  "title": "Senior Software Developer",
+  "tagline": "8+ Years Crafting Modern Web Experiences",
+  "location": "Spain",
+  "summary": "A seasoned Senior Front-End Developer with over 8 years of experience in designing and developing web applications. Expert in modern web technologies with a track record of leading dynamic development teams and serving as a key developer on 5+ enterprise projects. Excels at translating client requirements into functional designs and simplifying complex problems to deliver effective software solutions. Continuously learning and applying new technologies to optimize performance and improve user experience.",
+  "highlights": {
+    "yearsExperience": 8,
+    "projectsDelivered": 6,
+    "companiesWorked": 6,
+    "teamSize": 10
+  },
+  "primarySkills": ["JavaScript", "TypeScript", "React", "Next.js", "Node.js"],
+  "experience": [
+    {
+      "id": 1,
+      "role": "Senior Software Developer / Team Lead",
+      "company": "BCD Travel",
+      "companyDescription": "Global leader in corporate travel management",
+      "location": "Antalya, Türkiye",
+      "period": "Jun 2022 — Present",
+      "duration": "3+ years",
+      "description": "Building a platform enabling seamless virtual payment experience for business travelers with the ability to book travel for unprofiled travelers.",
+      "achievements": [
+        "Architected and led development of a virtual payment platform serving thousands of business travelers",
+        "Led a cross-functional front-end team, improving delivery timelines and output quality",
+        "Implemented modern front-end solutions using React and TypeScript for scalable enterprise applications",
+        "Designed robust testing strategies ensuring reliability and high code quality"
+      ],
+      "technologies": ["React", "TypeScript", "Node.js", "REST APIs", "Agile"],
+      "companySize": "10,001+ employees",
+      "via": "EPAM Systems"
+    },
+    {
+      "id": 2,
+      "role": "Senior Software Engineer",
+      "company": "Security Bank Corporation",
+      "companyDescription": "Major banking institution in the Philippines",
+      "location": "St Petersburg, Russia",
+      "period": "Jan 2022 — May 2022",
+      "duration": "5 months",
+      "description": "Customer Service Process Automation — automating various processes using BPM, ChatBots, and Microservices.",
+      "achievements": [
+        "Developed and integrated advanced features within BPM, ChatBots, and Microservices",
+        "Streamlined customer service processes, enhancing user experience across banking services",
+        "Designed and executed robust testing procedures for scalability and reliability",
+        "Maintained engineering excellence through detailed code reviews and best practices"
+      ],
+      "technologies": ["JavaScript", "BPM", "Microservices", "ChatBots", "REST APIs"],
+      "companySize": "5,001-10,000 employees",
+      "via": "EPAM Systems"
+    },
+    {
+      "id": 3,
+      "role": "Software Developer / Team Lead",
+      "company": "Napoleon Games International",
+      "companyDescription": "Leading gaming and entertainment company",
+      "location": "St Petersburg, Russia",
+      "period": "Jan 2021 — Jan 2022",
+      "duration": "1 year",
+      "description": "Discovery and planning for full-scale implementation of a new platform for Napoleon Games' expansion into the Netherlands market.",
+      "achievements": [
+        "Led end-to-end platform development for Netherlands market expansion",
+        "Implemented modern front-end designs significantly enhancing UI/UX",
+        "Developed and optimized back-end integrations for seamless front-end to core system interaction",
+        "Led and mentored the front-end team, fostering collaboration and accelerating delivery",
+        "Refactored critical codebases improving readability, efficiency, and maintainability"
+      ],
+      "technologies": ["React", "TypeScript", "Node.js", "REST APIs", "CI/CD"],
+      "companySize": "Medium",
+      "via": "EPAM Systems"
+    },
+    {
+      "id": 4,
+      "role": "Software Engineer",
+      "company": "Genentech",
+      "companyDescription": "World-leading biotechnology company (Roche Group)",
+      "location": "St Petersburg, Russia",
+      "period": "Oct 2020 — Dec 2020",
+      "duration": "3 months",
+      "description": "Digital Clinical Trials platform for the VA, improving functionality for healthcare professionals.",
+      "achievements": [
+        "Engineered advanced features for a Digital Clinical Trials platform",
+        "Improved functionality and user experience for healthcare professionals",
+        "Designed comprehensive testing workflows safeguarding clinical data integrity",
+        "Refactored core components enhancing code clarity and scalability"
+      ],
+      "technologies": ["React", "JavaScript", "Healthcare APIs", "Testing", "Agile"],
+      "companySize": "10,001+ employees",
+      "via": "EPAM Systems"
+    },
+    {
+      "id": 5,
+      "role": "Key Developer / Team Lead",
+      "company": "Kronos Incorporated",
+      "companyDescription": "Global workforce management and HR solutions provider",
+      "location": "St Petersburg, Russia",
+      "period": "Aug 2018 — Sep 2020",
+      "duration": "2 years",
+      "description": "Implementation of additional features for WFC and WFD products to support European customers.",
+      "achievements": [
+        "Spearheaded end-to-end development of innovative features driving product value",
+        "Designed and implemented robust testing strategies ensuring reliability and scalability",
+        "Led and mentored a cross-functional team, coordinating efforts and enhancing productivity",
+        "Translated business requirements into effective software features for European markets"
+      ],
+      "technologies": ["JavaScript", "React", "Node.js", "REST APIs", "Agile"],
+      "companySize": "5,001-10,000 employees",
+      "via": "EPAM Systems"
+    },
+    {
+      "id": 6,
+      "role": "Software Developer",
+      "company": "EPAM Systems",
+      "companyDescription": "Global leader in digital platform engineering and software development",
+      "location": "St Petersburg, Russia → Antalya, Türkiye",
+      "period": "Oct 2017 — Present",
+      "duration": "8+ years",
+      "description": "Senior Software Developer at one of the world's largest IT services companies, working across multiple enterprise client projects.",
+      "achievements": [
+        "Delivered solutions for Fortune 500 clients across banking, healthcare, travel, and gaming industries",
+        "Consistently promoted and recognized for technical leadership and delivery excellence",
+        "Championed modern front-end development practices and mentored junior developers"
+      ],
+      "technologies": ["JavaScript", "TypeScript", "React", "Node.js", "Next.js"],
+      "companySize": "10,001+ employees"
+    }
+  ],
+  "skills": {
+    "Frontend": ["JavaScript", "TypeScript", "React", "Next.js", "HTML5", "CSS3", "Redux", "Responsive Design"],
+    "Backend": ["Node.js", "Express.js", "REST APIs", "Microservices", "BPM"],
+    "Tools & Practices": ["Git", "CI/CD", "Agile/Scrum", "Code Reviews", "Testing", "Webpack", "Vite"],
+    "Soft Skills": ["Team Leadership", "Mentoring", "Client Communication", "Problem Solving", "Cross-functional Collaboration"]
+  },
+  "education": [
+    {
+      "degree": "Master's degree",
+      "field": "Computer Science",
+      "institution": "Saint Petersburg Electrotechnical University «LETI»",
+      "institutionOriginal": "Санкт-Петербургский Государственный Электротехнический Университет «ЛЭТИ»",
+      "period": "2012 — 2018"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "React: Design Patterns",
+      "issuer": "LinkedIn Learning",
+      "date": "Nov 2022",
+      "url": "https://linkedin.com/learning/certificates/c8d38d8374394553876098a127905095dc1a1718514491f0cded5dd9785df2ba"
+    }
+  ],
+  "languages": [
+    { "language": "Russian", "level": "Native" },
+    { "language": "English", "level": "B2" }
+  ],
+  "contact": {
+    "linkedin": "https://www.linkedin.com/in/evgenii-kurdakov/",
+    "location": "Spain"
+  },
+  "terminal": {
+    "commands": {
+      "help": "Available commands:\n  about       — Learn more about me\n  experience  — View my work history\n  skills      — See my technical skills\n  education   — Educational background\n  contact     — Get in touch with me\n  whoami      — Who are you?\n  clear       — Clear the terminal\n  sudo hire evgenii — ???",
+      "about": "Senior Software Developer with 8+ years of experience.\nSpecializing in React, TypeScript, Node.js, and Next.js.\nCurrently at EPAM Systems, building enterprise solutions.\nPassionate about clean code, mentoring, and AI.",
+      "whoami": "You are a curious visitor exploring Evgenii's portfolio.\nGreat taste in websites, by the way! 👋",
+      "sudo hire evgenii": "[sudo] password for visitor: ********\n\n✅ Authorization successful!\n✅ Resume downloaded to your brain...\n✅ Interview request queued...\n\nJust kidding! But I'd love to chat.\nScroll down or run 'contact' to reach out."
+    }
+  }
+}
