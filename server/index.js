@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const rateLimit = require('express-rate-limit');
+const nodemailer = require('nodemailer');
 const path = require('path');
 const fs = require('fs');
 
@@ -59,6 +60,75 @@ function saveMessage(message) {
   fs.writeFileSync(messagesFile, JSON.stringify(messages, null, 2));
 }
 
+// ===== Email Setup =====
+const EMAIL_USER = process.env.EMAIL_USER;
+const EMAIL_PASS = process.env.EMAIL_PASS;
+
+let transporter = null;
+if (EMAIL_USER && EMAIL_PASS) {
+  transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: EMAIL_USER,
+      pass: EMAIL_PASS,
+    },
+  });
+
+  // Verify connection on startup
+  transporter.verify().then(() => {
+    console.log('📧 Email transporter ready');
+  }).catch((err) => {
+    console.error('📧 Email transporter error:', err.message);
+    transporter = null;
+  });
+} else {
+  console.log('📧 Email not configured (set EMAIL_USER and EMAIL_PASS env vars)');
+}
+
+async function sendNotificationEmail({ name, email, subject, message }) {
+  if (!transporter) return;
+
+  try {
+    await transporter.sendMail({
+      from: `"Portfolio Contact" <${EMAIL_USER}>`,
+      to: EMAIL_USER,
+      replyTo: email,
+      subject: `[Portfolio] ${subject || 'New message'} — from ${name}`,
+      html: `
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+          <h2 style="color: #00d4ff; border-bottom: 2px solid #7c3aed; padding-bottom: 10px;">
+            New Contact Form Submission
+          </h2>
+          <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+            <tr>
+              <td style="padding: 8px 12px; font-weight: bold; color: #555; width: 100px;">From:</td>
+              <td style="padding: 8px 12px;">${name}</td>
+            </tr>
+            <tr style="background: #f9f9f9;">
+              <td style="padding: 8px 12px; font-weight: bold; color: #555;">Email:</td>
+              <td style="padding: 8px 12px;"><a href="mailto:${email}">${email}</a></td>
+            </tr>
+            <tr>
+              <td style="padding: 8px 12px; font-weight: bold; color: #555;">Subject:</td>
+              <td style="padding: 8px 12px;">${subject || 'No subject'}</td>
+            </tr>
+          </table>
+          <div style="background: #f5f5f5; padding: 16px; border-radius: 8px; margin: 20px 0;">
+            <h3 style="margin: 0 0 10px; color: #333;">Message:</h3>
+            <p style="white-space: pre-wrap; color: #444; line-height: 1.6; margin: 0;">${message}</p>
+          </div>
+          <p style="color: #999; font-size: 12px; margin-top: 20px;">
+            Sent from your portfolio website contact form
+          </p>
+        </div>
+      `,
+    });
+    console.log(`📧 Notification email sent for message from ${name}`);
+  } catch (err) {
+    console.error('📧 Failed to send email:', err.message);
+  }
+}
+
 // ===== API Routes =====
 
 // Get resume data
@@ -80,7 +150,7 @@ app.get('/api/visitors', (req, res) => {
 });
 
 // Submit contact form
-app.post('/api/contact', contactLimiter, (req, res) => {
+app.post('/api/contact', contactLimiter, async (req, res) => {
   const { name, email, subject, message } = req.body;
 
   // Validation
@@ -96,8 +166,11 @@ app.post('/api/contact', contactLimiter, (req, res) => {
     return res.status(400).json({ error: 'Message must be at least 10 characters.' });
   }
 
-  // Save message
+  // Save message to file
   saveMessage({ name, email, subject, message });
+
+  // Send email notification
+  await sendNotificationEmail({ name, email, subject, message });
 
   console.log(`📩 New contact message from ${name} (${email})`);
   console.log(`   Subject: ${subject || 'No subject'}`);
